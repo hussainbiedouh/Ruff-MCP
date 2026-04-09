@@ -8,12 +8,33 @@ A Model Context Protocol (MCP) server that provides Ruff Python linter and forma
 - **ruff_format** - Format Python code with ruff
 - **ruff_fix** - Auto-fix linting issues
 
+## Prerequisites
+
+- **Ruff** - The Python linter and formatter
+
+  Install via one of:
+
+  ```bash
+  # Windows (winget)
+  winget install astral.Ruff
+
+  # macOS (Homebrew)
+  brew install ruff
+
+  # Linux
+  curl -LsSf https://astral.sh/ruff/install.sh | sh
+
+  # Or via pip
+  pip install ruff
+  ```
+
+  Or download from: https://github.com/astral-sh/ruff/releases
+
+  Note: This MCP server expects `ruff.exe` (Windows) or `ruff` (Unix) to be in your PATH or at:
+  - `C:\Users\<you>\.config\opencode\tools\ruff.exe`
+  - Or any location in your PATH
+
 ## Installation
-
-### Prerequisites
-
-- Python 3.10+
-- [Ruff](https://github.com/astral-sh/ruff) installed
 
 ### Setup
 
