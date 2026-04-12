@@ -4,7 +4,7 @@ import os
 
 RUFF_EXE = r"C:\Users\Hussain\.config\opencode\tools\ruff.exe"
 
-def ruff_check(path: str, fix: bool = False, output_format: str = "text") -> str:
+def ruff_check(path: str, fix: bool = False, output_format: str = "concise") -> str:
     """Run ruff check on files or directories."""
     cmd = [RUFF_EXE, "check", path]
     if fix:

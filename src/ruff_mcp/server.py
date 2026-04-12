@@ -78,8 +78,8 @@ async def handle_list_tools() -> list[Tool]:
                     },
                     "output_format": {
                         "type": "string",
-                        "description": "Output format (text, json, junit, sarif)",
-                        "default": "text",
+                        "description": "Output format (concise, full, json, json-lines, junit, sarif)",
+                        "default": "concise",
                     },
                 },
                 "required": ["path"],
@@ -143,7 +143,7 @@ async def handle_call_tool(
         if name == "ruff_check":
             path = arguments.get("path", "")
             fix = arguments.get("fix", False)
-            output_format = arguments.get("output_format", "text")
+            output_format = arguments.get("output_format", "concise")
             result = ruff_check(path, fix, output_format)
             return [
                 TextContent(
